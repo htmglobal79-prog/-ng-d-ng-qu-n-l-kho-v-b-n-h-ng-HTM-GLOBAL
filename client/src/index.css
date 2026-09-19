@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap');
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  --background: #f6f8f5;
+  --foreground: #173f35;
+  --card: #ffffff;
+  --card-foreground: #173f35;
+  --popover: #ffffff;
+  --popover-foreground: #173f35;
+  --primary: #173f35;
+  --primary-foreground: #d5f36b;
+  --secondary: #e9f5d3;
+  --secondary-foreground: #3e6549;
+  --muted: #eef3eb;
+  --muted-foreground: #819188;
+  --accent: #edf4e9;
+  --accent-foreground: #173f35;
+  --destructive: #c85d54;
+  --border: #e2eae0;
+  --input: #e2eae0;
+  --ring: #8fb36f;
+  --radius: 0.75rem;
+}
+
+* { border-color: var(--border); }
+html { font-family: 'DM Sans', sans-serif; background: var(--background); }
+body { margin: 0; min-width: 320px; background: var(--background); color: var(--foreground); }
+button, input, select { font: inherit; }
+button { cursor: pointer; }
+button:active { transform: scale(.98); }
+::selection { background: #d5f36b; color: #173f35; }
+@media (prefers-reduced-motion: no-preference) { button, a { transition: color 160ms ease-out, background-color 160ms ease-out, border-color 160ms ease-out, opacity 160ms ease-out, transform 160ms ease-out; } }
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+}

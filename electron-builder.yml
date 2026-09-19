@@ -1,0 +1,32 @@
+appId: vn.htmglobal.retailflow
+productName: HTM GLOBAL
+copyright: Copyright © 2026 HTM GLOBAL
+asar: true
+files:
+  - dist/public/**/*
+  - electron/**/*
+directories:
+  output: release
+  buildResources: build
+publish: null
+win:
+  target:
+    - nsis
+    - portable
+  artifactName: HTM-GLOBAL-${version}-${arch}.${ext}
+nsis:
+  oneClick: false
+  perMachine: false
+  allowToChangeInstallationDirectory: true
+mac:
+  target:
+    - dmg
+  category: public.app-category.business
+  artifactName: HTM-GLOBAL-${version}-${arch}.${ext}
+dmg:
+  title: HTM GLOBAL
+  artifactName: HTM-GLOBAL-${version}-${arch}.${ext}
+linux:
+  target:
+    - AppImage
+  category: Office
